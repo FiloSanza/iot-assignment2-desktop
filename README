@@ -1,0 +1,4 @@
+# IoT Assignment 2 - Desktop App
+
+This app will read from the arduino serial line and save the comms in a simple text file.
+The data will be used to create graphs and logs on a web page.
