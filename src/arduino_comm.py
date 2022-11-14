@@ -18,8 +18,6 @@ class SerialLine():
         msgs = []
         for line in raw_data.decode().split("\n"):
             print(f"DEBUG: {line}")
-            msgs.append(Message(line))
+            msgs.append(Message.from_json(line))
         
         return msgs
-
-        

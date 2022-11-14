@@ -2,3 +2,13 @@
 
 This app will read from the arduino serial line and save the comms in a simple text file.
 The data will be used to create graphs and logs on a web page.
+
+Comms between arduino and this script will use the following json format:
+```
+{
+    "log_level": 1,
+    "component": 2,
+    "data": "32.10",
+    "comment": "Water level read."
+}
+```
