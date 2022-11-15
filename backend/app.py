@@ -11,8 +11,3 @@ arduino = arduino_comm.SerialLine("COM3", 9600, timeout=0.1)
 def get_logs():
     database.write_all(arduino.read())
     return json.dumps(database.read())
-
-@app.route('/get_water_levels', methods=['GET'])
-def get_water_levels():
-    database.write_all(arduino.read())
-    return []
