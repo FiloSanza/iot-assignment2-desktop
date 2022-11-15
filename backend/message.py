@@ -1,10 +1,12 @@
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 
-@dataclass
 @dataclass_json
+@dataclass
 class Message:
-    log_level: int
-    component: int
+    src: int
+    tag: int
+    time: int
+    lvl: int
     data: str
-    comment: str
+    desc: str
