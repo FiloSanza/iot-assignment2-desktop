@@ -1,6 +1,5 @@
 import React from "react";
 import axios from 'axios';
-import { httpHelper } from './httpHelper'
 import { useEffect, useState } from "react";
 
 const DisplayInfo = () => {
@@ -22,14 +21,15 @@ const DisplayInfo = () => {
             try {
                 await axios.get(url_info)
                   .then((response) => {
-                    for (const r of response.data) {
+                    for (const res of response.data) {
                         new_data.push({
-                            src: r.src,
-                            data: r.data,
-                            desc: r.desc
+                            src: res.src,
+                            data: res.data,
+                            desc: res.desc
                         });
                     } 
-                  }).catch((e) => console.log(e));
+                  })
+                  .catch((e) => console.log(e));
             } catch(error) {
                 console.log(error.response.data);
             }

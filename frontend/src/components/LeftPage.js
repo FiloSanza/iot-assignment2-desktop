@@ -28,9 +28,9 @@ const LeftPage = () => {
           try {
               await axios.get(url_info)
                 .then((response) => {
-                  for (const data of response.data) {
-                    if (data.tag === 0) {
-                      new_state.datasets[0].data.push(parseInt(data.data));
+                  for (const res of response.data) {
+                    if (res.tag === 0) {
+                      new_state.datasets[0].data.push(parseInt(res.data));
                       new_state.labels.push('');
                     } 
                   } 
