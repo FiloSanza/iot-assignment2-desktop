@@ -7,13 +7,20 @@ class SerialLine():
         self.arduino = serial.Serial(port=port, baudrate=baudrate, timeout=timeout)
     
     def write_byte(self, data: int):
-        self.arduino.write(bytes([data]))
+        try:
+            self.arduino.write(bytes([data]))
+        except Exception:
+            pass
     
     def read(self) -> List[Message]:
         msgs = []
         while True:
-            line = self.arduino.read_until(b"\n").decode()[:-1]
-
+            line = ''
+            try:
+                line = self.arduino.read_until(b"\n").decode()[:-1]
+            except Exception:
+                pass
+            
             if len(line) == 0:
                 break
 
