@@ -7,14 +7,13 @@ const ManualControl = () => {
 
     const [angle, setValveAngle] = useState(0);
 
-    const url_angle = "http://localhost8080/valve_control"
+    const url_angle = "http://localhost:5000/valve_control"
 
     const changeValveAngle = value =>  {
         setValveAngle(value);
         const post = { angle: angle };
         try {
-            // const res = axios.post(url_angle, post);
-            // console.log(res.data);
+            const res = axios.post(url_angle, post);
         } catch(e) {
             alert(e);
         }
