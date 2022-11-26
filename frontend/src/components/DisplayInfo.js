@@ -43,48 +43,6 @@ const DisplayInfo = () => {
     return (
         <div className='mx-10 w-full'> 
             <h1 className='w-full h-full centered mb-4 font-bold'>{state}</h1>
-            {/* <table className='w-full h-full bg-white shadow-lg'>
-                <thead>
-                    {
-                        columns.map((value, key) => {
-                            return (
-                                <tr key={key}>
-                                    <th scope='col' className='bg-sky-500 border text-left px-8 py-4'>
-                                        {value.src}
-                                    </th>
-                                    <th scope='col' className='bg-sky-500 border text-left px-8 py-4'>
-                                        {value.data}
-                                    </th>
-                                    <th scope='col' className='bg-sky-500 border text-left px-8 py-4'>
-                                        {value.desc}
-                                    </th>
-                                </tr> 
-                            )
-                        })
-                    }
-                </thead>
-                <tbody>
-                    {
-                        data.map((value, key) => {
-                            return (key < data.length-5)
-                            ? null
-                            : (
-                                <tr key={key}>
-                                    <td className='border px-8 py-4'>
-                                        {value.src}
-                                    </td>
-                                    <td className='border px-8 py-4'>
-                                        {value.data}
-                                    </td>
-                                    <td className='border px-8 py-4'>
-                                        {value.desc}
-                                    </td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>  */}
         </div>       
     )
 }
