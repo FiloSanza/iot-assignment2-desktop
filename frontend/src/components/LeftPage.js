@@ -25,23 +25,22 @@ const LeftPage = () => {
     useEffect(() => {
       var new_state = {...state};
       const fetchData = async () =>{
-          try {
-              await axios.get(url_info)
-                .then((response) => {
-                  for (const res of response.data) {
-                    if (res.tag === 0) {
-                      new_state.datasets[0].data.push(parseInt(res.data));
-                      new_state.labels.push('');
-                    } 
-                  } 
-                }).catch((e) => console.log(e));
-          }  catch(error) {
-              console.log(error.response.data);
-          }
+        try {
+          await axios.get(url_info)
+          .then((response) => {
+            for (const res of response.data) {
+              if (res.tag === 0) {
+                new_state.datasets[0].data.push(parseInt(res.data));
+                new_state.labels.push('');
+              } 
+            } 
+          }).catch((e) => console.log(e));
+        }  catch(error) {
+          console.log(error.response.data);
+        }
       }
       fetchData().then( () => {
-        console.log(); // Fix bug
-        setState(new_state)
+        setState(new_state);
       });
   }, []);
 

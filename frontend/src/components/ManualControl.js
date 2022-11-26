@@ -13,7 +13,7 @@ const ManualControl = () => {
         setValveAngle(value);
         const post = { angle: angle };
         try {
-            const res = axios.post(url_angle, post);
+            axios.post(url_angle, post);
         } catch(e) {
             alert(e);
         }
