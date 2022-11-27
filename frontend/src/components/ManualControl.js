@@ -23,7 +23,7 @@ const ManualControl = () => {
         <React.Fragment>
             <section className='w-full h-full centered'>
             <div className='w-full h-full centered'>
-                <label className="w-full h-full centered font-bold">Valve Angle</label>
+                <label className="w-full h-full centered font-bold text-xl">Valve Angle</label>
                 <ReactSlider
                     step={1}
                     min={0}
@@ -35,7 +35,7 @@ const ManualControl = () => {
                         changeValveAngle(value)
                     }}
                     />
-                    <span className='w-full h-full centered'>{angle}deg</span>
+                    <span className='w-full h-full centered text-xl'>{angle}deg</span>
                 </div>
             </section>
         </React.Fragment>
